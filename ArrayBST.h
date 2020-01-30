@@ -6,10 +6,11 @@
 class ArrayBST:public BST
 {
 	public:
+		ArrayBST();
 		void add(int data);
 		void PreorderTraversal();
 		bool search(int data);
 	private:
-		int Data[MAX_SIZE];
+		int data[MAX_SIZE];
 };
 #endif
