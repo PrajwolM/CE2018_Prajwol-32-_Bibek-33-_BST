@@ -67,3 +67,28 @@ bool ArrayBST::search(int data){
 
 }
 
+int main(){
+	ArrayBST a;
+	a.add(5);
+	a.add(4);
+	a.add(10);
+	a.add(6);
+	a.add(1);
+	a.add(7);
+	a.add(8);
+	
+	for(int i=0; i<MAXSIZE;i++){
+		std::cout<<a.element[i];
+	}
+	std::cout<<std::endl;
+	
+	a.preorderTraversal(10);
+	
+    if(a.search(6)){
+        std::cout<<"6 present in BST"<<std::endl;
+    }
+    else{
+        std::cout<<"6 not present in BST"<<std::endl;
+    }
+}
+
