@@ -1,7 +1,7 @@
 #ifndef ARRAYBST_H
 #define ARRAYBST_H 
 #include "BST.h"
-#define MAX	_SIZE 1000
+#define MAX_SIZE 1000
 
 class ArrayBST:public BST
 {
@@ -12,6 +12,8 @@ class ArrayBST:public BST
 		bool search(int data);
 		int get_left_child(int index);
 		int get_right_child(int index);
+		virtual int Min_ele()=0;
+		virtual int Max_ele()=0;
 	private:
 		int data[MAX_SIZE];
 };
