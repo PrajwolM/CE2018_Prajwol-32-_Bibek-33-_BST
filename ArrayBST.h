@@ -12,8 +12,8 @@ class ArrayBST:public BST
 		bool search(int data);
 		int get_left_child(int index);
 		int get_right_child(int index);
-		virtual int Min_ele()=0;
-		virtual int Max_ele()=0;
+		int Min_ele()=0;
+		int Max_ele()=0;
 	private:
 		int data[MAX_SIZE];
 };
