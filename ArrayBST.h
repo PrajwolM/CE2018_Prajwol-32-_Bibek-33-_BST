@@ -10,6 +10,8 @@ class ArrayBST:public BST
 		void add(int data);
 		void PreorderTraversal();
 		bool search(int data);
+		int get_left_child(int index);
+		int get_right_child(int index);
 	private:
 		int data[MAX_SIZE];
 };
