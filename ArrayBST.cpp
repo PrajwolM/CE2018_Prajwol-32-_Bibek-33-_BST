@@ -66,7 +66,7 @@ bool ArrayBST::search(int data){
 	return false;
 
 }
-int Min_ele(){
+int ArrayBST:: Min_ele(){
     for(i=1;i=<MAX_SIZE;){
         if (data[2*i]==0){std::cout<<"MIN data ="<<data[i];
             break;}
