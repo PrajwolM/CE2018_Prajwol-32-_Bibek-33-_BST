@@ -27,7 +27,26 @@ void ArrayBST::add(int data){
 	this->data[0]=this->data[0]+1;
 	
 }
+int ArrayBST::get_left_child(int index){
+    if(data[index]!=0 && (2*index)<=MAXSIZE){
+        return 2*index;
+    }
+    return -1;
+}
+
+int ArrayBST::get_right_child(int index){
+    if(data[index]!=0 && (2*index+1)<=MAXSIZE){
+        return 2*index+1;
+    }
+    return -1;
+}
 void ArrayBST::preorderTaversal(){
+	if(index>0 && data[index]!=0)
+    {
+        std::cout<<data[index]<<std::endl;
+        preorderTraversal(get_left_child(index));
+        preorderTraversal(get_right_child(index));
+    }
 	
 }
 bool ArrayBST::search(int data){
