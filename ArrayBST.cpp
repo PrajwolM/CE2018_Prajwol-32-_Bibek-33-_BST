@@ -2,7 +2,7 @@
 #include "ArrayBST.h"
 using namespace std;
 ArrayBST::ArrayBST(){
-	for(int i=0;i<MAX-SIZE;i++){
+	for(int i=0;i<MAX_SIZE;i++){
 		this ->data[i]=0;
 	}
 }
@@ -11,7 +11,7 @@ void ArrayBST::add(int data){
 		data[1]=data;
 	}
 	else{
-		for(int i=1;i<=MAXSIZE; ){
+		for(int i=1;i<=MAX_SIZE; ){
 			if(data<this->data[i]){
 				i=2*i;
 			}
@@ -28,14 +28,14 @@ void ArrayBST::add(int data){
 	
 }
 int ArrayBST::get_left_child(int index){
-    if(data[index]!=0 && (2*index)<=MAXSIZE){
+    if(data[index]!=0 && (2*index)<=MAX_SIZE){
         return 2*index;
     }
     return -1;
 }
 
 int ArrayBST::get_right_child(int index){
-    if(data[index]!=0 && (2*index+1)<=MAXSIZE){
+    if(data[index]!=0 && (2*index+1)<=MAX_SIZE){
         return 2*index+1;
     }
     return -1;
@@ -51,7 +51,7 @@ void ArrayBST::preorderTaversal(){
 }
 bool ArrayBST::search(int data){
 	int current_index=1;
-	while(current_index<=MAXSIZE){
+	while(current_index<=MAX_SIZE){
 	    if(data[current_index]==data){
 	        return true;
 	        break;
@@ -66,6 +66,14 @@ bool ArrayBST::search(int data){
 	return false;
 
 }
+int Min_ele(){
+    for(i=1;i=<MAX_SIZE;){
+        if (data[2*i]==0){std::cout<<"MIN data ="<<data[i];
+            break;}
+        i*=2;
+    }
+    return data[i];
+}
 
 int main(){
 	ArrayBST a;
@@ -77,8 +85,8 @@ int main(){
 	a.add(7);
 	a.add(8);
 	
-	for(int i=0; i<MAXSIZE;i++){
-		std::cout<<a.element[i];
+	for(int i=0; i<MAX_SIZE;i++){
+		std::cout<<a.data[i];
 	}
 	std::cout<<std::endl;
 	
